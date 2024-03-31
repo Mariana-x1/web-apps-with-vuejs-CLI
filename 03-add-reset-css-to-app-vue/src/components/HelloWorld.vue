@@ -99,6 +99,7 @@ export default {
 <style scoped>
 h3 {
   margin: 40px 0 0;
+  color: rgb(226, 177, 28);
 }
 ul {
   list-style-type: none;
