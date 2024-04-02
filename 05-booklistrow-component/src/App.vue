@@ -1,15 +1,22 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
   <LayoutHeader />
+  <main>
+    <div id="app" class="inside">
+      <BookList />
+    </div>
+  </main>
 </template>
 
 <script>
+import BookList from "./components/BookList.vue";
 import LayoutHeader from "./components/LayoutHeader.vue";
 
 export default {
   name: "App",
   components: {
     LayoutHeader,
+    BookList,
   },
 };
 </script>
