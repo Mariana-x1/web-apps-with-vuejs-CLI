@@ -2,12 +2,16 @@
   <tr class="table-item__table-row">
     <td>{{ title }}</td>
     <td>{{ isbn }}</td>
+    <td><BaseButton text="Add Bookmark" variant="secondary" /></td>
   </tr>
 </template>
 
 <script>
+import BaseButton from "./BaseButton.vue";
 export default {
-  components: {},
+  components: {
+    BaseButton,
+  },
   props: {
     title: String,
     isbn: String,
