@@ -1,11 +1,39 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
+  <div id="app">
+    <book-list
+      :books="books"
+      @bookmark-changed="handleBookmarkChanged"
+    ></book-list>
+  </div>
 </template>
 
 <script>
+import BookList from "./components/BookList.vue";
+
 export default {
   name: "App",
-  components: {},
+  components: {
+    BookList,
+  },
+  data() {
+    return {
+      books: [
+        { title: "Book Title 1", isBookmarked: false },
+        { title: "Book Title 2", isBookmarked: false },
+      ],
+    };
+  },
+  methods: {
+    handleBookmarkChanged(book) {
+      // Handle bookmark change here
+      console.log(
+        "Bookmark changed for:",
+        book.title,
+        "New state:",
+        book.isBookmarked
+      );
+    },
+  },
 };
 </script>
 
